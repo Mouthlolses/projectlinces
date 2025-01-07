@@ -12,13 +12,13 @@ public class Biblioteca {
         this.usuarios = new ArrayList<>();
     }
 
-    // Função para adicionar um novo livro à biblioteca
+
     public void adicionarLivro(Livro livro) {
         livros.add(livro);
         System.out.println("Livro adicionado: " + livro.getTitulo());
     }
 
-    // Função para listar todos os livros da biblioteca
+
     public void listarLivros() {
         if (livros.isEmpty()) {
             System.out.println("Nenhum livro disponível.");
@@ -108,67 +108,5 @@ public class Biblioteca {
                     System.out.println("Opção inválida. Tente novamente.");
             }
         }
-    }
-}
-
-// Classe para representar um Livro
-class Livro {
-
-    private static int idCounter = 1;
-    private int id;
-    private String titulo;
-    private String autor;
-    private int anoPublicacao;
-
-    public Livro(int id, String titulo, String autor, int anoPublicacao) {
-        this.id = id;
-        this.titulo = titulo;
-        this.autor = autor;
-        this.anoPublicacao = anoPublicacao;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public static int gerarId() {
-        return idCounter++;
-    }
-
-    @Override
-    public String toString() {
-        return "ID: " + id + ", Título: " + titulo + ", Autor: " + autor + ", Ano de Publicação: " + anoPublicacao;
-    }
-}
-
-// Classe para representar um Usuário
-class Usuario {
-
-    private static int idCounter = 1;
-    private int id;
-    private String nome;
-    private int idade;
-
-    public Usuario(int id, String nome, int idade) {
-        this.id = id;
-        this.nome = nome;
-        this.idade = idade;
-    }
-
-    public static int gerarId() {
-        return idCounter++;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    @Override
-    public String toString() {
-        return "ID: " + id + ", Nome: " + nome + ", Idade: " + idade;
     }
 }
